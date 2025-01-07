@@ -1,0 +1,14 @@
+<div class="calendar-container">
+
+    <h2>Add Product</h2>
+    <input type="number" placeholder="Enter Product Id" #inpId>
+    <input type="text"  placeholder="Enter Product Name" #inpName/>
+    <input type="number"  placeholder="Enter Product Price" #inpPrice/>
+    <input type="number" placeholder="Enter Product Quantity" #inpQuantity/>
+
+    <button (click)="onAddProductClicked(+inpId.value,inpName.value,+inpPrice.value,+inpQuantity.value)" routerLink="afterAdd" >Add</button>
+
+  
+</div>
+  
+  

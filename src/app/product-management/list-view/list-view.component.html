@@ -1,0 +1,36 @@
+<div class="modifyContainer" *ngIf="modify">
+
+  <h2>Modify Product</h2>
+  <p>ID : {{Mid}}</p>
+  <input type="text"  value="{{Mname}}" #inpName />
+  <input type="number"  value="{{Mprice}}" #inpPrice/>
+  <input type="number"  value="{{Mquantity}}" #inpQuantity/>
+  <button (click)="modifyProduct(Mid,inpName.value,+inpPrice.value,+inpQuantity.value)">Modify</button>
+
+</div>
+
+<table class="table table-striped ">
+    <thead>
+      <tr>
+        <th scope="col">Product Id</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of productData">
+        <td>{{product.prod_id}}</td>
+        <td>{{product.prod_name}}</td>
+        <td>{{product.prod_price | currency:'INR'}}</td>
+        <td>{{product.prod_quantity}}</td>
+        <td><button class="btn btn-primary" (click)="onModifyClicked(product.prod_id)">Modify</button></td>
+        <td><button class="btn btn-danger" (click)="onDeleteClicked(product.prod_id)">Delete</button></td>
+        <td><a class="btn btn-success" routerLink="cart" (click)="onAddToCartClicked(product.prod_id)">Add to Cart</a></td>
+      </tr>
+    </tbody>
+  </table>
+

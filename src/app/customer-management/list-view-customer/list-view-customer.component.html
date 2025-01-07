@@ -1,0 +1,34 @@
+
+<div class="modifyContainer" *ngIf="modify">
+
+  <h2>Modify Product</h2>
+  <p>ID : {{Mid}}</p>
+  <input type="text"  value="{{Mname}}" #inpName />
+  <input type="text"  value="{{Memail}}" #inpEmail/>
+  <input type="number"  value="{{Mphone}}" #inpPhone/>
+  <button (click)="modifyCustomer(Mid,inpName.value,inpEmail.value,+inpPhone.value)">Modify</button>
+
+</div>
+
+<table class="table table-striped ">
+    <thead>
+      <tr>
+        <th scope="col">Customer Id</th>
+        <th scope="col">Customer Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customerData">
+        <td> {{customer.cust_id}} </td>
+        <td>{{customer.cust_name}}</td>
+        <td>{{customer.cust_email}}</td>
+        <td>{{customer.phone}}</td>
+        <td><button class="btn btn-primary" (click)="onModifyClicked(customer.cust_id)">Modify</button></td>
+        <td><button class="btn btn-danger" (click)="onDeleteClicked(customer.cust_id)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>

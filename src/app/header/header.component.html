@@ -1,0 +1,41 @@
+<header>
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img class="ms-2" src="../../assets/OnlineProd.jpg" alt="Logo" width="70" height="80%">
+          <span class="compName">OnlineProd</span>
+        </a>
+        <div class="collapse navbar-collapse d-flex" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" routerLink="/product-management" [routerLinkActive]="'active'">Product Management</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/customer-management" [routerLinkActive]="'active'">Customer Management</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/sale-product" [routerLinkActive]="'active'">Sale Product</a>
+            </li>
+          </ul>
+        </div>
+      </nav> -->
+
+      <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" routerLink="home">
+          <!-- <img class="ms-2" src="../../assets/OnlineProd.jpg" alt="Logo" width="60" height="90%"> -->
+          <span class="compName">OnlineProd</span>
+          </a>
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <!-- <button class="nav-link" routerLink="/product-management" [routerLinkActive]="'active'">Product Management</button> -->
+                <button class="btn btn-outline-secondary" routerLink="/product-management" [routerLinkActive]="'active'"><b>Products</b></button>
+              </li>
+              <li class="nav-item">
+                <!-- <a class="nav-link" routerLink="/customer-management" [routerLinkActive]="'active'">Customer Management</a> -->
+                <button class="btn btn-outline-secondary" routerLink="/customer-management" [routerLinkActive]="'active'"><b>Customers</b></button>
+              </li>
+          </ul>
+        </div>
+      </nav>
+      
+</header>

@@ -1,0 +1,11 @@
+<div class="calendar-container">
+
+    <h2>Add Customer</h2>
+    <input type="number" placeholder="Enter Customer Id" #inpId>
+    <input type="text"  placeholder="Enter Customer Name" #inpName/>
+    <input type="text"  placeholder="Enter Customer Email" #inpEmail/>
+    <input type="number" placeholder="Enter Customer Phone" #inpPhone/>
+
+    <button (click)="onAddCustomerClicked(+inpId.value,inpName.value,inpEmail.value,+inpPhone.value)" [routerLink]="['customer-management/card']">Add</button>
+  
+</div>

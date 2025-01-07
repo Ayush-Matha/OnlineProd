@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+body{
+   // background-color: rgba($color: #6c757d, $alpha: 0.4);
+   background-image: url(./assets/pexels-splitshire-1526.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+  
+}

@@ -1,0 +1,21 @@
+.compName{
+    margin: auto 8px;
+    font-size: larger;
+    font-weight: bold;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+}
+ul li{
+    margin-left: 10px;
+}
+
+ul li a{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+a{
+    cursor: pointer;
+}

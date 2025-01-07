@@ -1,0 +1,29 @@
+<div class="cartContainer">
+    <div *ngIf="cartItems.length > 0; else emptyCart">
+        <h2>Cart Items</h2>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Product Name</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of cartItems">
+              <td>{{item.productName}}</td>
+              <td> <button class="btn btn-outline-danger" (click)="onQuantitySubClicked(item.productId)">-</button> {{item.quantity}} <button class="btn btn-outline-success" (click)="onQuantityAddClicked(item.productId)">+</button> </td>
+              <td>{{(item.price*item.quantity) | currency:'INR'}}</td>
+              <td><button class="btn btn-danger" (click)="removeItem(item.productId)" >Remove</button></td>
+            </tr>
+          </tbody>
+        </table>
+          <h3>Total: {{ totalAmount | currency:'INR' }}</h3>
+          <button class=" totalContainer btn btn-primary" (click)="clearCart()">Clear Cart</button>
+        </div>
+      <ng-template #emptyCart>
+        <p>Your cart is empty.</p>
+      </ng-template>      
+</div>
+

@@ -1,0 +1,29 @@
+
+<div class="modifyContainer" *ngIf="modify">
+
+    <h2>Modify Product</h2>
+    <p>ID : {{Mid}}</p>
+    <input type="text"  value="{{Mname}}" #inpName />
+    <input type="number"  value="{{Mprice}}" #inpPrice/>
+    <input type="number"  value="{{Mquantity}}" #inpQuantity/>
+    <button (click)="modifyProduct(Mid,inpName.value,+inpPrice.value,+inpQuantity.value)">Modify</button>
+
+</div>
+<ul>
+    <li  *ngFor="let product of productsData">
+        <div href="#" class="container">
+            <img class="productImage" src="../../../assets/black-fashion-backpack.jpg" alt="">
+            <p class="prodName">{{product.prod_name}}</p>
+            <p class="prodPrice"><b>{{product.prod_price | currency:'INR'}}</b></p>
+            <div class="modiDel">
+                <!-- <a class="text-success text-decoration-none fw-bold" (click)="onModifyClicked(product.prod_id)">Modify</a>
+                <a class="text-danger text-decoration-none fw-bold" (click)="onDeleteClicked(product.prod_id)">Delete</a> -->
+                <img src="../../../assets/edit.png" (click)="onModifyClicked(product.prod_id)" alt="" height="25" width="25">
+                <p><b>ID : {{product.prod_id}}</b></p>
+                <img src="../../../assets/delete.png" (click)="onDeleteClicked(product.prod_id)" alt="" height="25" width="25">
+            </div>
+            <button class="btn btn-primary ms-1 me-1" (click)="onAddToCartClicked(product.prod_id)">Add to Cart</button>
+        </div>
+        
+    </li>
+</ul>

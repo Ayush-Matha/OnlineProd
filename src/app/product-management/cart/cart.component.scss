@@ -1,0 +1,45 @@
+.cartContainer {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .cartContainer h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .cartContainer h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .cartContainer .totalContainer {
+    display: block;
+    margin: 20px auto;
+    // background-color: #007bff;
+    // color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .emptyCart {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+  }
+
+  p{
+    text-align: center;
+    color:rgb(209, 14, 14);
+    font-size: 25px;
+  }
+  

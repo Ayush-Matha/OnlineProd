@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.chgColor{
+    color: rgba($color: #0c90f6, $alpha: 1.0);
+    text-decoration: underline;
+    text-decoration-color: rgb(215, 80, 103);
+    text-decoration-thickness: 6px;
+}
+p{
+    margin-top: 7px;
+    text-align: center;
+}
+
+.homeContainer{
+    margin: auto;
+    margin-top: 120px;
+    width: 70%;
+    height: 100%;
+    border: 4px solid whitesmoke;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeContainer p{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
